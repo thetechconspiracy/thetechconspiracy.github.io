@@ -1,0 +1,33 @@
+/*
+Joseph Still
+ITEC 362
+12/09/2020
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+body{
+    background: #222222;
+    color: #41FF00;
+    font-family: "Roboto Mono", monospace;
+}
+
+body a{
+    color: #41FF00;
+}
+
+body a:hover{
+    color: #FFB000;
+}
+
+main{
+    padding-top: 10px;
+    width: 70%;
+    margin: auto;
+}
+img{
+    border: 4px double #41FF00;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}

@@ -1,0 +1,79 @@
+/*
+Joseph Still
+ITEC 362
+12/09/2020
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Share+Tech+Mono&display=swap');
+body{
+    margin: 0px;
+}
+
+header{
+    font-family: "Roboto Mono", monospace;
+    background-color: #222222;
+    color: #41FF00;
+    margin: 0px;
+    padding-top: 20px;
+    border-bottom: 4px double #41FF00;
+}
+#mainText{
+    padding-left: 20px;
+    font-family: "Share Tech Mono", monospace;
+    text-align: center;
+    font-size: 32px;
+    border-right: 2px solid #41FF00;
+}
+#discord {
+    color: #41FF00;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: 32px;
+}
+#discord:hover{
+    color:#FFB000;
+}
+
+#logo {
+    border: none;
+    padding-left: 3px;
+}
+header > nav > ul a{
+    text-decoration: none;
+    color: #41FF00;
+}
+header > nav > ul a:hover{
+    color: #FFB000;
+}
+
+header > .grid-container{
+    width: 100%;
+    grid-column-gap: 20px;
+    display: inline-grid;
+    grid-template-columns: auto 80% auto;
+    margin: 0px;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+    padding-left: 50px;
+    
+}
+header > nav > ul > li:first-of-type{
+    padding-left: 0px;
+}
+header > nav > ul > li:last-of-type{
+    padding-right: 0px;
+}
+
+header > nav > ul {
+    align-items: center;
+    max-width: 465px;
+    #min-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #41FF00;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

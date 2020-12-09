@@ -1,0 +1,101 @@
+<!--
+Joseph Still
+ITEC 362
+12/09/2020-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <!-- Table -->
+        <style>
+            table, th, td {
+                border: 1px solid #41FF00;
+                border-collapse: collapse;
+                vertical-align: middle;
+                padding: 8px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        </style>
+        <meta charset="utf-8">
+        <title>Resources: UofSC Cyber Security Club</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+    
+    <body>
+        <header>
+            <div class="grid-container">
+                <div class="grid-item"><a href="index.html"><img id=logo src="images/CSCLogo.jpg" alt="Cyber Security Club logo"></a></div>
+                <div class="grid-item"><p id=mainText>UofSC Cyber Security Club</p></div>
+                <div class="grid-item"><a id=discord href="https://discord.gg/9GRUY3D">Discord Server</a></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <table style="margin: auto;">
+                <caption style="padding-bottom: 5px;">Software and Login Resouces</caption>
+                <tr>
+                    <th colspan="3">CTF teams</th>
+                </tr>
+                <tr>
+                    <th>Service</th>
+                    <th>Team name</th>
+                    <th>Password</th>
+                </tr>
+                <tr>
+                    <td>CSAW-CTF</td>
+                    <td>USC Cyber</td>
+                    <td>H4ckthepl4n3t!</td>
+                </tr>
+                <tr>
+                    <td>evlz-ctf</td>
+                    <td>LittleCockyTables</td>
+                    <td>H4ckTh3Pl4n3t!</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Software</th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th colspan="2">Download Link</th>
+                </tr>
+                <tr>
+                    <td>VirtualBox</td>
+                    <td colspan="2"><a href="https://www.virtualbox.org/">Oracle VirtualBox download</a></td>
+                </tr>
+                <tr>
+                    <td>Prebuilt Kali Linux image (VirtualBox)</td>
+                    <td colspan="2"><a href="https://phoenixnap.com/kb/how-to-install-kali-linux-on-virtualbox">PhoenixNap</a></td>
+                </tr>
+                <tr>
+                    <td>Kali Linux ISO</td>
+                    <td colspan="2"><a href="https://www.kali.org/downloads/">Kali.org</a></td>
+                </tr>
+                <tr>
+                    <th colspan="3">Discord Server</th>
+                </tr>
+                <tr>
+                    <td colspan="3"><a href="https://discord.gg/9GRUY3D">Link to Discord</a></td>
+                </tr>
+            </table>
+        </main>
+        <footer class=footer>
+            <div class="grid-container" id="footer-wrapper">
+                <!-- JavaScript adapted from: https://stackoverflow.com/questions/9228947/how-to-get-current-html-page-title-with-javascript -->
+                <div class="grid-item"><p id=location><script>document.write(document.getElementsByTagName("title")[0].innerHTML);</script></p></div>
+                <div class="grid-item"><p><a href="contact.html">Feedback</a></p></div>
+            </div>
+        </footer>
+    </body>
+</html>

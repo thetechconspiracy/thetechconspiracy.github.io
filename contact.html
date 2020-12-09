@@ -7,7 +7,7 @@ ITEC 362
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
-        <title>Home: UofSC Cyber Security Club</title>
+        <title>Contact: UofSC Cyber Security Club</title>
         <link rel="icon" href="favicon.ico">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
@@ -32,19 +32,34 @@ ITEC 362
         </header>
         
         <main>
-            <article>
-                <h2>What We Do:</h2>
-                <img src="images/promo.jpg" alt="A guy in his house, doing who knows what on a PowerMac G4" width="400">
-                <p>The University of South Carolina Cyber Security Team hopes to teach members about various principles of computer security through Hackathons and Capture the Flag events, where members compete with other teams in solving various problems and puzzles.</p>
-                <p>We conduct meetings over Discord every Wednesday and Friday at 5:30 PM EST.  An invite link can be found on the <a href=resources.html>Resources</a> page.  The Resources page also contains information on how to join our Capture The Flag teams on various services.</p>
-                <p>Please see the <a href=schedule.html>Schedule</a> page for more events, including presentations from various experts in the field of computer science.</p><br><br>
-                <p style="font-size: 10px;">*Picture may not reflect actual CSC activities</p>
-            </article>
+            <form style="line-height: 1.5;">
+                <fieldset>
+                    <legend>Contact Us</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="Name"><br>
+                    
+                    <label for="email">*Email Address:</label>
+                    <input type="email" id="email" name="Email" required><br>
+                    
+                    <label for="type">*Feedback Type:</label>
+                    <input type="text" id="type" name="Type" list="feedbackType" required><br><br>
+                    <datalist id=feedbackType>
+                        <option>Suggestion</option>
+                        <option>Critisizm</option>
+                        <option>Question</option>
+                        <option>Complaint</option>
+                    </datalist>
+                    
+                    <label for="feedback" style="position: relative; bottom: 80px">*Feedback:</label>
+                    <textarea style="resize: none;" cols="50" rows="6" id="feedback" name="Feedback" required></textarea>
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
         </main>
         <footer class=footer>
             <div class="grid-container" id="footer-wrapper">
                 <!-- JavaScript adapted from: https://stackoverflow.com/questions/9228947/how-to-get-current-html-page-title-with-javascript -->
-                <div class="grid-item"><p id=location><script>document.write(document.getElementsByTagName("title")[0].innerHTML);</script></p></div>
+                <div class="grid-item"><p id=location><script>var title = document.getElementsByTagName("title")[0].innerHTML; document.write(title);</script></p></div>
                 <div class="grid-item"><p><a href="contact.html">Feedback</a></p></div>
             </div>
         </footer>

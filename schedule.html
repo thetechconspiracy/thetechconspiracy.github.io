@@ -1,0 +1,122 @@
+<!--
+Joseph Still
+ITEC 362
+12/09/2020-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Schedule: UofSC Cyber Security Club</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/footer.css">
+        
+        <link rel="stylesheet" href="css/calendar.css">
+        <script src='../lib/FullCalendar/main.js'></script>
+        
+        <!--Override style to make calendar area a bit wider-->
+        <style>
+            main{
+                width: 80%;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <div class="grid-container">
+                <div class="grid-item"><a href="index.html"><img id=logo src="images/CSCLogo.jpg" alt="Cyber Security Club logo"></a></div>
+                <div class="grid-item"><p id=mainText>UofSC Cyber Security Club</p></div>
+                <div class="grid-item"><a id=discord href="https://discord.gg/9GRUY3D">Discord Server</a></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <script>
+                /*************************************************************************************************
+                 *JS based on a sample provided with the FullCalendar library, adapted by me for use on this site*
+                 *                          https://github.com/fullcalendar/fullcalendar                         *
+                 *************************************************************************************************/
+                document.addEventListener('DOMContentLoaded',function() {
+                    var calendarEl = document.getElementById('calendar');
+                    var calendar = new FullCalendar.Calendar(calendarEl, {
+                        headerToolbar:{
+                            left: 'prev,next',
+                            center: 'title',
+                            right: 'today'
+                        },
+                        
+                        displayEventTime: false,
+                                                
+                        googleCalendarApiKey: 'AIzaSyDcCVo7kzKVqW66ERBNy7UnJ5fI_hhpYuk',                        
+                        events: 'f9440rsaj8jgtfl038fj8kacl8@group.calendar.google.com',//CSE Events Calendar
+                        
+                        eventClick: function(arg) {
+                            // opens events in a popup window
+                            window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
+                            arg.jsEvent.preventDefault() // don't navigate in main tab
+                        },
+                    });
+                    calendar.render();
+                    
+                    var scheduleEl = document.getElementById('schedule');
+                    var schedule = new FullCalendar.Calendar(scheduleEl, {
+                        headerToolbar:{
+                            left: '',
+                            center: 'title',
+                            right: ''
+                        }, 
+                        
+                        initialView: 'list', duration: {days: 14},
+                        
+                        googleCalendarApiKey: 'AIzaSyDcCVo7kzKVqW66ERBNy7UnJ5fI_hhpYuk',
+                        events: 'f9440rsaj8jgtfl038fj8kacl8@group.calendar.google.com',//CSE Events Calendar
+                        
+                        eventClick: function(arg) {
+                            // opens events in a popup window
+                            window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');                            
+                            arg.jsEvent.preventDefault() // don't navigate in main tab
+                        },
+                    });
+                    schedule.render();
+                });
+            </script> 
+            
+            
+            
+            
+            <div id="calendar-wrapper" style="display:flex;">
+                <div id="calendar" style="width:50%; margin-right:5px;">
+                    <!-- Calendar goes here, injected through JavaScript -->
+                </div>
+                
+                <div id="schedule" style="width:50%; margin-left: 5px;">
+                    <!-- Schedule goes here, injected through JavaScript -->
+                </div>
+            </div>
+            
+            
+            <p style="text-align: center;">
+                <a href="https://calendar.google.com/calendar/u/0?cid=Zjk0NDByc2FqOGpndGZsMDM4Zmo4a2FjbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Add to Google Calendar</a>
+                <a href="https://calendar.google.com/calendar/ical/f9440rsaj8jgtfl038fj8kacl8%40group.calendar.google.com/public/basic.ics">Download iCal file</a>
+            </p>
+        </main>
+        <footer class=footer>
+            <div class="grid-container" id="footer-wrapper">
+                <!-- JavaScript adapted from: https://stackoverflow.com/questions/9228947/how-to-get-current-html-page-title-with-javascript -->
+                <div class="grid-item"><p id=location><script>document.write(document.getElementsByTagName("title")[0].innerHTML);</script></p></div>
+                <div class="grid-item"><p><a href="contact.html">Feedback</a></p></div>
+            </div>
+        </footer>
+    </body>
+</html>
